@@ -1,0 +1,148 @@
+.main-footer {
+
+  @media @mediaTablet {
+    padding-top: 29px;
+    margin-bottom: 27px;
+  }
+
+  @media @mediaDesktop {
+    padding-top: 15px;
+    margin-bottom: 65px;
+  }
+
+  &__wrapper {
+    .wrap();
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+
+    @media @mediaTablet {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &--hide {
+    display: none;
+
+    @media @mediaTablet {
+      display: block;
+    }
+  }
+
+  &__logo-inner {
+    margin-bottom: 34px;
+
+    @media @mediaMaxMobile {
+      width: 100%;
+    }
+
+    @media @mediaTablet {
+      margin-bottom: 0;
+    }
+
+    &:hover .logo__pink,
+    &:hover .logo__glass,
+    &:hover .logo__stars {
+      fill: @strong-pink;
+    }
+
+    &:active .logo__pink {
+      fill: @dark-blue;
+      opacity: 0.3;
+    }
+
+    &:active .logo__glass,
+    &:active .logo__glass-and-stars {
+      opacity: 0.3;
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: space-between;
+
+    @media @mediaMaxMobile {
+      margin-bottom: 25px;
+    }
+
+    @media @mediaTablet {
+      padding-top: 10px;
+      padding-left: 4px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__social-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    margin-right: 12px;
+    font-size: 0;
+    border: 3px solid fade(@dark-blue, 10);
+    border-radius: 50%;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      border-color: @dark-blue;
+    }
+
+    &:active {
+      border-color: @dark-blue;
+      opacity: 0.1;
+    }
+
+    svg {
+      fill: @strong-pink;
+    }
+  }
+
+  &__copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media @mediaTablet {
+      padding-top: 8px;
+      margin-left: 21px;
+    }
+
+    @media @mediaDesktop {
+      margin-left: 0;
+    }
+  }
+
+  &__designed {
+    margin: 0;
+    margin-right: 15px;
+    font-size: 14px;
+    line-height: 18px;
+
+    @media @mediaDesktop {
+      font-size: 18px;
+    }
+  }
+
+  &__htmlacademy {
+    padding-top: 15px;
+  }
+
+  &__htmlacademy-logo {
+    fill: @strong-pink;
+
+    &:hover {
+      fill: @dark-blue;
+    }
+
+    &:active {
+      fill: fade(@dark-blue, 30);
+    }
+  }
+}

@@ -1,0 +1,580 @@
+.form-contest {
+  .wrap(deviceTablet);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media @mediaDesktop {
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__fieldset {
+    .wrap(fildset);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border: none;
+    text-align: left;
+    box-sizing: border-box;
+
+    @media @mediaMaxMobile {
+      padding-top: 29px;
+      padding-bottom: 55px;
+    }
+
+    @media @mediaTablet {
+      position: relative;
+      margin-bottom: 63px;
+      border: 2px solid @gray;
+      border-radius: 3px;
+    }
+
+    @media @mediaDesktop {
+      margin-bottom: 65px;
+    }
+
+    &:nth-child(2n) {
+      @media @mediaTablet {
+        padding-top: 56px;
+        padding-bottom: 59px;
+      }
+
+      @media @mediaDesktop {
+        padding-top: 59px;
+        padding-bottom: 58px;
+      }
+    }
+
+    &:nth-child(2n+3) {
+      @media @mediaTablet {
+        padding-top: 46px;
+        padding-bottom: 26px;
+      }
+
+      @media @mediaDesktop {
+        padding-top: 42px;
+        padding-bottom: 13px;
+      }
+    }
+
+    &:first-child {
+      @media @mediaMaxMobile {
+        order: -3;
+        padding-bottom: 46px;
+      }
+
+      @media @mediaTablet {
+        padding: 0;
+        margin-top: 0;
+      }
+
+      @media @mediaDesktop {
+        width: 435px;
+        padding-top: 6px;
+        margin-left: 0;
+      }
+    }
+
+    &:nth-child(2) {
+      @media @mediaMaxMobile {
+        padding-bottom: 43px;
+      }
+      @media @mediaDesktop {
+        width: 435px;
+        margin-right: 0;
+      }
+    }
+
+    &:nth-child(3) {
+      @media @mediaMaxMobile {
+        order: -1;
+      }
+    }
+
+    &:nth-child(4) {
+      @media @mediaMaxMobile {
+        order: -2;
+      }
+
+      @media @mediaDesktop {
+        padding-right: 0;
+        padding-bottom: 5px;
+      }
+    }
+
+    &--no-border {
+      @media @mediaTablet {
+        border: none;
+      }
+    }
+
+    &--bg-gray {
+      @media @mediaMaxMobile {
+        background-color: @light-gray;
+      }
+    }
+
+    &:nth-child(5) {
+      @media @mediaMaxMobile {
+        padding-bottom: 0;
+      }
+
+      @media @mediaTablet {
+        padding-top: 41px;
+        padding-bottom: 45px;
+      }
+
+      @media @mediaDesktop {
+        padding-bottom: 41px;
+      }
+    }
+  }
+
+  &__legend {
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    color: @strong-pink;
+
+    @media @mediaMaxMobile {
+      width: 100%;
+      max-width: 100%;
+      padding-top: 37px;
+      padding-right: 35px;
+      padding-bottom: 12px;
+      padding-left: 35px;
+    }
+
+    @media @mediaTablet {
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      max-width: 437px;
+      padding-right: 32px;
+      padding-left: 32px;
+      background-color: @white;
+      transform: translateX(-50%);
+    }
+
+    &--padding {
+      @media @mediaMaxMobile {
+        padding-top: 57px;
+        padding-bottom: 0;
+      }
+    }
+
+    &--hide {
+      display: none;
+
+      @media @mediaTablet {
+        display: block;
+      }
+    }
+
+    &--bg-gray {
+      @media @mediaMaxMobile {
+        background-color: @light-gray;
+      }
+    }
+  }
+
+  &__fieldset-wrapper {
+
+    &--columns {
+      width: 100%;
+      
+      @media @mediaDesktop {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-right: 0;
+      }
+    }
+
+    &--flex {
+      width: 100%;
+
+      @media @mediaDesktop {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  &__form-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin-bottom: 16px;
+
+    @media @mediaMaxMobile {
+      width: 87.5%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    @media @mediaTablet {
+      width: 100%;
+      margin-bottom: 53px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--app {
+      margin-bottom: 45px;
+
+      @media @mediaTablet {
+        margin-bottom: 45px;
+      }
+
+      @media @mediaDesktop {
+        padding-left: 17px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &--col-rev {
+      @media @mediaTablet {
+        position: relative;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        margin-bottom: 29px;
+      }
+
+      @media @mediaDesktop {
+        flex-grow: 1;
+        margin-right: 70px;
+        margin-bottom: 0;
+      }
+
+      &:last-child {
+        @media @mediaDesktop {
+          margin-right: 0;
+        }
+      }
+    }
+
+    &--fix-width {
+      margin-bottom: 52px;
+
+      @media @mediaDesktop {
+        width: 259px;
+      }
+
+      &:first-child {
+        @media @mediaDesktop {
+          order: 1;
+        }
+      }
+
+      &:nth-child(2) {
+        @media @mediaDesktop {
+          order: 4;
+        }
+      }
+
+      &:nth-child(3) {
+        @media @mediaDesktop {
+          order: 2;
+        }
+      }
+
+      &:nth-child(4) {
+        @media @mediaDesktop {
+          order: 5;
+        }
+      }
+
+      &:nth-child(5) {
+        @media @mediaDesktop {
+          order: 3;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+
+        @media @mediaDesktop {
+          order: 6;
+        }
+      }
+    }
+  }
+
+  &__label-text,
+  &__label-contact {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: @strong-pink;
+
+    @media @mediaMaxMobile {
+      padding-left: 20px;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__label-text {
+    @media @mediaTablet {
+      margin-right: 19px;
+    }
+  }
+
+  &__label-contact {
+    @media @mediaTablet {
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+  }
+
+  &__text-suffix {
+    @media @mediaTablet {
+      display: none;
+    }
+  }
+
+  &__input-text,
+  &__input-contact {
+    width: 100%;
+    padding-top: 14px;
+    padding-bottom: 15px;
+    padding-left: 18px;
+    font-size: 18px;
+    line-height: 30px;
+    border: 2px solid @gray;
+    border-radius: 3px;
+
+    &:hover {
+      border-color: @dark-blue;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: @strong-pink;
+    }
+  }
+
+  &__input-text {
+    @media @mediaTablet {
+      flex-grow: 1;
+      width: auto;
+    }
+  }
+
+  &__input-contact {
+    @media @mediaTablet {
+      min-height: 63px;
+      box-sizing: border-box;
+    }
+
+    @media @mediaDesktop {
+      padding-right: 70px;
+    }
+  }
+
+  &__input-text::-webkit-input-placeholder,
+  &__input-contact::-webkit-input-placeholder,
+  &__review-field::-webkit-input-placeholder {
+    font-size: 18px;
+    line-height: 30px;
+    color: @dark-blue;
+    opacity: 1;
+  }
+
+  &__contact-square {
+    display: none;
+
+    @media @mediaTablet {
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      display: block;
+      width: 59px;
+      height: 59px;
+      background-color: @gray;
+
+      svg {
+        position: absolute;
+        bottom: 20px;
+        left: 19px;
+      }
+    }
+  }
+
+  &__label-checkbox,
+  &__label-radio {
+    position: relative;
+    font-size: 18px;
+    color: @dark-blue;
+    box-sizing: border-box;
+
+    @media @mediaMaxMobile {
+      padding-left: 70px;
+    }
+
+    @media @mediaTablet {
+      padding-left: 59px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: -2px;
+      width: 35px;
+      height: 35px;
+      background-color: @white;
+      border: 2px solid @gray;
+
+      @media @mediaDesktop {
+        top: 0;
+        left: 0;
+      }
+    }
+
+    &:hover::before {
+      border-color: @dark-blue;
+    }
+
+    &:active::before {
+      border-color: @strong-pink;
+    }
+  }
+
+  &__label-radio {
+    &::before {
+      border-radius: 50%;
+    }
+  }
+
+  &__input-radio,
+  &__checkbox {
+    display: none;
+  }
+
+  &__checkbox:checked + .form-contest__label-checkbox::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 7px;
+    width: 20px;
+    height: 9px;
+    border-left: 3px solid @strong-pink;
+    border-bottom: 3px solid @strong-pink;
+    border-radius: 2px;
+    transform: rotate(-45deg);
+
+    @media @mediaDesktop {
+      top: 10px;
+      left: 9px;
+    }
+  }
+
+  &__input-radio:checked + .form-contest__label-radio::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: @strong-pink;
+
+    @media @mediaDesktop {
+      left: 12px;
+      top: 12px;
+    }
+  }
+
+  &__review-field {
+    padding-top: 14px;
+    padding-right: 15px;
+    padding-bottom: 3px;
+    padding-left: 16px;
+    font-size: 18px;
+    line-height: 30px;
+    border: 2px solid @gray;
+    border-radius: 3px;
+    box-sizing: border-box;
+
+    @media @mediaMaxMobile {
+      width: 88%;
+      min-height: 202px;
+      margin-left: 6.25%;
+      margin-bottom: 47px;
+      margin-top: -12px;
+    }
+
+    @media @mediaTablet {
+      width: 100%;
+      min-height: 194px;
+    }
+
+    @media @mediaDesktop {
+      min-height: 128px;
+    }
+
+    &:hover {
+      border-color: @dark-blue;
+    }
+
+    &:focus {
+      border-color: @strong-pink;
+      outline: none;
+    }
+  }
+
+  &__submit {
+    @media @mediaTablet {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: baseline;
+      width: 100%;
+      margin-top: 9px;
+    }
+
+    @media @mediaDesktop {
+      margin-top: 0;
+    }
+  }
+
+  &__submit-btn {
+    .btn();
+
+    @media @mediaMaxMobile {
+      width: 280px;
+      margin-bottom: 35px;
+    }
+
+    @media @mediaTablet {
+      width: 300px;
+    }
+  }
+
+  &__required-info {
+    text-transform: uppercase;
+  }
+
+  &__required-desktop {
+    display: none;
+
+    @media @mediaDesktop {
+      display: inline;
+    }
+  }
+
+  &__required-symbol {
+    color: @strong-pink;
+  }
+}

@@ -1,0 +1,54 @@
+.information {
+  padding: 0;
+  line-height: 24px;
+
+  @media @mediaMaxMobile {
+    padding-top: 20px;
+    padding-bottom: 21px;
+  }
+
+  @media @mediaTablet {
+    padding-top: 49px;
+    padding-bottom: 38px;
+  }
+
+  @media @mediaDesktop {
+    padding-top: 67px;
+    padding-bottom: 77px;
+  }
+
+  &__wrapper {
+    .wrap();
+  }
+
+  &__title {
+    padding-top: 21px;
+    padding-bottom: 15px;
+    margin: 0;
+    font-size: 24px;
+    line-height: 26px;
+    font-weight: 300;
+
+    @media @mediaTablet {
+      padding: 0;
+      margin: 0;
+      font-size: 40px;
+      line-height: 1.2;
+
+      @media @mediaDesktop {
+        font-size: 50px;
+      }
+
+      &--answer {
+        width: 350px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 10px;
+
+        @media @mediaDesktop {
+          width: 420px;
+        }
+      }
+    }
+  }
+}

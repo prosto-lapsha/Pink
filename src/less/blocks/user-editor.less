@@ -1,0 +1,366 @@
+.user-editor {
+  padding-top: 20px;
+  background-color: @light-gray;
+
+  @media @mediaMaxMobile {
+    margin-bottom: 39px;
+  }
+
+  @media @mediaTablet {
+    padding-top: 42px;
+    padding-bottom: 53px;
+  }
+
+  @media @mediaDesktop {
+    margin-bottom: 23px;
+    background-color: transparent;
+  }
+
+  &__wrapper {
+    .wrap(deviceTablet);
+
+    @media @mediaDesktop {
+      background-color: @light-gray;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media @mediaTablet {
+      flex-wrap: nowrap;
+      justify-content: space-around;
+    }
+
+    @media @mediaDesktop {
+      justify-content: space-between;
+      padding-top: 42px;
+      padding-right: 60px;
+      padding-bottom: 57px;
+      padding-left: 80px;
+    }
+  }
+
+  &__figure {
+    width: 280px;
+    margin: 0;
+
+    @media @mediaMaxMobile {
+      margin-bottom: 34px;
+    }
+
+    @media @mediaTablet {
+      width: 300px;
+      margin-top: 15px;
+      margin-right: 46px;
+      margin-bottom: -6px;
+    }
+  }
+
+  &__photo {
+    @media @mediaTablet {
+      width: 300px;
+      height: auto;
+    }
+  }
+
+  &__editor {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+
+    @media @mediaTablet {
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 274px;
+    }
+
+    @media @mediaDesktop {
+      width: 410px;
+    }
+  }
+
+  &__tools {
+    display: flex;
+
+    @media @mediaMaxMobile {
+      position: relative;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      padding-right: 40px;
+      padding-left: 37px;
+      padding-bottom: 66px;
+      box-sizing: border-box;
+      border-bottom: 1px solid fade(@dark-blue, 10);
+    }
+
+    @media @mediaTablet {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+
+  &__tool {
+    @media @mediaTablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      padding-top: 23px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid fade(@dark-blue, 10);
+    }
+
+    @media @mediaDesktop {
+      padding-top: 12px;
+      padding-bottom: 11px;
+    }
+
+    &--not-active {
+      @media @mediaMaxMobile {
+        .user-editor__icon {
+          cursor: pointer;
+          fill: fade(@dark-blue, 30);
+
+          &:hover {
+            fill: fade(@dark-blue, 50);
+          }
+        }
+      }
+    }
+  }
+
+  &__tool-btn {
+    cursor: default;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    @media @mediaTablet {
+      width: 24px;
+      height: 24px;
+      padding: 0;
+      margin-right: 30px;
+    }
+
+    @media @mediaDesktop {
+      width: 48px;
+      height: 48px;
+      margin-right: 44px;
+    }
+  }
+
+  &__icon {
+    cursor: default;
+    @media @mediaTablet {
+      fill: @strong-pink;
+    }
+
+    &--crop {
+      @media @mediaTablet {
+        width: 24px;
+        height: 22px;
+      }
+
+      @media @mediaDesktop {
+        width: 44px;
+        height: 44px;
+      }
+    }
+
+    &--fill {
+      @media @mediaTablet {
+        width: 24px;
+        height: 22px;
+      }
+
+      @media @mediaDesktop {
+        width: 48px;
+        height: 52px;
+      }
+    }
+
+    &--contrast {
+      @media @mediaTablet {
+        width: 16px;
+        height: 16px;
+      }
+
+      @media @mediaDesktop {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    &--active {
+      @media @mediaMaxMobile {
+        fill: @strong-pink;
+      }
+    }
+  }
+
+  &__scale {
+    height: 2px;
+    background-color: @dark-blue;
+
+    @media @mediaMaxMobile {
+      position: absolute;
+      top: 86px;
+      left: 38px;
+      display: none;
+      width: 75%;
+    }
+
+    @media @mediaTablet {
+      position: relative;
+      width: 202px;
+    }
+
+    @media @mediaDesktop {
+      width: 288px;
+    }
+
+    &--active {
+      @media @mediaMaxMobile {
+        display: block;
+        left: 11%;
+      }
+    }
+  }
+
+  &__toggle {
+    position: absolute;
+    display: block;
+    width: 14px;
+    height: 14px;
+    box-sizing: border-box;
+    border: 2px solid @strong-pink;
+    border-radius: 50%;
+    background-color: @light-gray;
+    cursor: pointer;
+
+    @media @mediaMaxMobile {
+      top: -6px;
+      left: 80%;
+    }
+
+    @media @mediaTablet {
+      top: -6px;
+    }
+
+    &:active {
+      background-color: @strong-pink;
+    }
+
+    &--crop {
+      @media @mediaTablet {
+        left: 146px;
+      }
+    }
+
+    &--fill {
+      @media @mediaTablet {
+        left: 23px;
+      }
+    }
+
+    &--contrast {
+      @media @mediaTablet {
+        left: 95px;
+      }
+    }
+  }
+
+  &__btns {
+    @media @mediaMaxMobile {
+      padding-top: 38px;
+      padding-bottom: 29px;
+    }
+
+    @media @mediaTablet {
+      margin-top: auto;
+    }
+
+    @media @mediaDesktop {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 100%;
+    }
+  }
+
+  &__btn {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 13px;
+    font-size: 18px;
+    font-weight: bold;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 30px;
+    background-color: inherit;
+    outline: none;
+    cursor: pointer;
+
+    @media @mediaMaxMobile {
+      width: 280px;
+      margin-bottom: 12px;
+    }
+
+    @media @mediaTablet {
+      width: 260px;
+    }
+
+    @media @mediaDesktop {
+      width: 184px;
+    }
+
+    &--submit {
+      border-color: @strong-pink;
+      color: @strong-pink;
+
+      @media @mediaTablet {
+        margin-bottom: 24px;
+      }
+
+      @media @mediaDesktop {
+        margin-bottom: 0;
+      }
+
+      &:hover {
+        background-color: @strong-pink;
+        color: @white;
+      }
+
+      &:active {
+        background-color: @strong-pink;
+        color: fade(@white, 30);
+      }
+    }
+
+    &--cancel {
+      margin-bottom: 0;
+      border-color: fade(@dark-blue, 10);
+      color: fade(@dark-blue, 10);
+
+      &:hover {
+        border-color: fade(@dark-blue, 30);
+        color: fade(@dark-blue, 30);
+      }
+
+      &:active {
+        border-color: fade(@dark-blue, 0);
+        background-color: fade(@dark-blue, 30);
+        color: fade(@white, 30);
+      }
+    }
+  }
+}

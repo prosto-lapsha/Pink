@@ -1,0 +1,24 @@
+@white: #ffffff;
+@black: #000000;
+@dark-blue: #283645;
+@light-gray: #f2f2f2;
+@gray: #e5e5e5;
+@dark-gray: #bec2c7;
+@strong-pink: #d22856;
+@green: #2aab6d;
+@dark-green: #1c9b5e;
+
+
+//MEDIA
+@max-mobile: 659px;
+@tablet: 660px;
+@transitional: 700px;
+@desktop: 960px;
+
+@mediaTablet: ~"(min-width: @{tablet})";
+@mediaDesktop: ~"(min-width: @{desktop})";
+@mediaMaxMobile: ~"(max-width: @{max-mobile})";
+
+@mobileRetina2x: ~"@{mediaMaxMobile} and (min-resolution: 192dpi)", ~"@{mediaMaxMobile} and (min-resolution: 2dppx)";
+@tabletRetina2x: ~"(@{mediaTablet} and (max-width: 959px)) and (min-resolution: 192dpi)", ~"(@{mediaTablet} and (max-width: 959px)) and (min-resolution: 2dppx)";
+@desktopRetina2x: ~"@{mediaDesktop} and (min-resolution: 192dpi)", ~"@{mediaDesktop} and (min-resolution: 2dppx)";

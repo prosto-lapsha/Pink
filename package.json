@@ -1,0 +1,40 @@
+{
+  "name": "pink",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Пинк",
+  "author": "Соня Лапшина",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:prosto-lapsha/pink.git"
+  },
+  "bugs": {
+    "url": "https://github.com/prosto-lapsha/pink/issues"
+  },
+  "homepage": "https://github.com/prosto-lapsha/pink",
+  "devDependencies": {
+    "autoprefixer": "6.4.1",
+    "css-mqpacker": "^5.0.1",
+    "grunt": "1.0.1",
+    "grunt-browser-sync": "2.2.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-contrib-less": "1.4.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "1.0.0",
+    "grunt-csso": "^2.0.1",
+    "grunt-gh-pages": "^2.0.0",
+    "grunt-postcss": "0.8.0",
+    "grunt-svgmin": "^4.0.0",
+    "grunt-text-replace": "^0.4.0",
+    "load-grunt-tasks": "^3.5.2"
+  },
+  "scripts": {
+    "build": "grunt build",
+    "start": "grunt deploy && grunt serve"
+  },
+  "engines": {
+    "node": "6.5"
+  }
+}

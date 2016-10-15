@@ -1,0 +1,56 @@
+.page-description {
+  padding-top: 45px;
+  margin-bottom: 5px;
+  line-height: 24px;
+
+  @media @mediaTablet {
+    padding-top: 92px;
+    margin-bottom: 71px;
+  }
+
+  @media @mediaDesktop {
+    margin-bottom: 71px;
+  }
+
+  &__text {
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 30px;
+
+    @media @mediaTablet {
+      font-size: 18px;
+    }
+
+    &--medium-width {
+      width: 76%;
+
+      @media @mediaTablet {
+        width: 450px;
+      }
+
+      @media @mediaDesktop {
+        width: 575px;
+      }
+    }
+
+    &--large-width {
+      width: 88%;
+
+      @media @mediaTablet{
+        width: 550px;
+      }
+
+      @media @mediaDesktop {
+        width: 755px;
+      }
+    }
+  }
+
+  &__text-hint {
+    display: none;
+
+    @media @mediaTablet {
+      display: inline;
+    }
+  }
+}

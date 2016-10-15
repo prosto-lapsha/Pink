@@ -1,0 +1,34 @@
+.logo {
+
+  &--header {
+    @media @mediaMaxMobile {
+      transform: translate(-71px, -18px);
+    }
+  }
+  
+  &__glass {
+    @media @mediaDesktop {
+      display: none;
+    }
+
+    &--header {
+      @media @mediaMaxMobile {
+        display: none;
+      }
+    }
+  }
+
+  &__glass-and-stars {
+    @media @mediaMaxMobile {
+      display: none;
+    }
+
+    @media @mediaTablet {
+      display: none;
+    }
+
+    @media @mediaDesktop {
+      display: block;
+    }
+  }
+}

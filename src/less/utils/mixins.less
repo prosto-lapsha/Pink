@@ -1,0 +1,124 @@
+.include-custom-font(@src, @family, @weight: normal, @style: normal) {
+  @font-face{
+      font-family: @family;
+      src: url("../../fonts/@{src}.woff") format("woff"),
+           url("../../fonts/@{src}.woff2") format("woff");
+      font-weight: @weight;
+      font-style: @style;
+  }
+}
+
+.wrap(@blockForm) when (@blockForm = fildset) {
+  @media (min-width: @tablet) and (max-width: (@transitional - 1)) {
+    width: 620px;
+    padding-left: 58px;
+    padding-right: 58px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: @transitional) and (max-width: (@desktop - 1)) {
+    padding-left: 5.71%;
+    padding-right: 5.71%;
+  }
+
+  @media (min-width: @desktop) {
+    width: 940px;
+    padding-left: 58px;
+    padding-right: 58px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.wrap(@mobileOnly) when (@mobileOnly = mobile) {
+  @media (max-width: @max-mobile) {
+    padding-left: 6.25%;
+    padding-right: 6.25%;
+  }
+}
+
+.wrap(@deviceType) when (@deviceType = deviceTablet) {
+  @media (min-width: @tablet) and (max-width: (@transitional - 1)) {
+    width: 620px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: @transitional) and (max-width: (@desktop - 1)) {
+    padding-left: 5.71%;
+    padding-right: 5.71%;
+  }
+
+  @media (min-width: @desktop) {
+    width: 940px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.wrap(@deviceType) when (@deviceType = deviceDesktop){
+  width: 940px;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wrap() {
+  padding-left: 6.25%;
+  padding-right: 6.25%;
+
+  @media (min-width: @tablet) and (max-width: (@transitional - 1)) {
+    width: 620px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: @transitional) and (max-width: (@desktop - 1)) {
+    padding-left: 5.71%;
+    padding-right: 5.71%;
+  }
+
+  @media (min-width: @desktop) {
+    width: 940px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.btn() {
+  display: block;
+  padding-top: 16px;
+  padding-bottom: 17px;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: bold;
+  color: @white;
+  border: none;
+  border-radius: 3px;
+  text-transform: uppercase;
+  white-space: normal;
+  background-color: @green;
+  cursor: pointer;
+
+  &:hover {
+    background-color: @dark-green;
+  }
+
+  &:active {
+    color: fade(@white, 30);
+  }
+
+  &:disabled {
+    background-color: @gray;
+  }
+}

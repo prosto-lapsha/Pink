@@ -1,0 +1,177 @@
+.post {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 280px;
+  margin-bottom: 20px;
+  background-color: @light-gray;
+
+   @media @mediaMaxMobile {
+     padding-bottom: 18px;
+   }
+
+  @media @mediaTablet {
+    width: 300px;
+    padding-bottom: 25px;
+  }
+
+  @media @mediaDesktop {
+    padding-bottom: 23px;
+    margin-bottom: 53px;
+  }
+
+  &:nth-child(2n) {
+    @media @mediaTablet {
+      margin-right: 20px;
+    }
+
+    @media @mediaDesktop {
+      margin-right: 0;
+    }
+  }
+
+  &--panorama {
+    position: relative;
+    width: 100%;
+
+    @media @mediaMaxMobile {
+      padding-left: 20px;
+      padding-right: 20px;
+      box-sizing: border-box;
+    }
+
+    @media @mediaTablet {
+      flex-direction: row;
+      align-items: flex-end;
+      width: 100%;
+      box-sizing: border-box;
+      padding-right: 29px;
+      padding-bottom: 13px;
+      padding-left: 29px;
+      margin-bottom: 50px;
+    }
+
+    @media @mediaDesktop {
+      padding-bottom: 13px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__figure {
+    position: relative;
+    margin: 0;
+
+    @media @mediaTablet {
+      width: 300px;
+      margin-bottom: 17px;
+    }
+  }
+
+  &__img {
+    @media @mediaTablet {
+      width: 300px;
+      height: auto;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-grow: 1;
+
+    @media @mediaMaxMobile {
+      padding-top: 12px;
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    @media @mediaTablet {
+      min-height: 106px;
+      padding-right: 31px;
+      padding-left: 28px;
+    }
+
+    @media @mediaDesktop {
+      min-height: 108px;
+    }
+  }
+
+  &__author {
+    margin: 0;
+
+    &--panorama {
+      @media @mediaMaxMobile {
+      padding-top: 17px;
+      }
+
+      @media @mediaTablet {
+        padding-top: 24px;
+        flex-grow: 1;
+      }
+    }
+  }
+
+  &__name {
+    font-weight: bold;
+  }
+
+  &__time {
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    padding-bottom: 10px;
+    margin: 0;
+
+    &--panorama {
+      padding-bottom: 12px;
+
+      @media @mediaTablet {
+        order: 1;
+      }
+    }
+  }
+
+  &__like {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: @strong-pink;
+
+    @media @mediaMaxMobile {
+      justify-content: flex-start;
+      padding-right: 0;
+    }
+
+    @media @mediaTablet {
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      width: 100%;
+    }
+
+    &--panorama {
+      @media @mediaTablet {
+        width: 120px;
+      }
+    }
+  }
+
+  &__like-btn {
+    width: 13px;
+    height: 22px;
+
+    @media @mediaMaxMobile {
+      margin-right: 17px;
+    }
+  }
+
+  &__like-heart path {
+    fill: @strong-pink;
+  }
+}

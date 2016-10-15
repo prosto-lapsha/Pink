@@ -1,0 +1,55 @@
+.feature {
+  margin-bottom: 31px;
+  margin-top: 15px;
+
+  @media @mediaTablet {
+    margin-bottom: 34px;
+    text-align: left;
+  }
+
+  @media @mediaDesktop {
+    width: 300px;
+    margin-top: 0;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  &__image-wrapper {
+    display: none;
+
+    @media @mediaDesktop {
+      display: block;
+      margin-bottom: 56px;
+    }
+  }
+
+  &__phone-image {
+    @media @mediaDesktop {
+    margin-bottom: -8px;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: bold;
+
+    @media @mediaDesktop {
+      width: 230px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 24px;
+      font-size: 30px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+
+    @media @mediaDesktop {
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+  }
+}
